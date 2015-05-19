@@ -13,6 +13,9 @@
 		072508E81B0B00D4000BEEF0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072508E71B0B00D4000BEEF0 /* Images.xcassets */; };
 		072508EB1B0B00D4000BEEF0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 072508E91B0B00D4000BEEF0 /* LaunchScreen.xib */; };
 		072508F71B0B00D5000BEEF0 /* SimpleStockAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072508F61B0B00D5000BEEF0 /* SimpleStockAppTests.swift */; };
+		072509041B0B010F000BEEF0 /* SIOSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 072509021B0B010F000BEEF0 /* SIOSocket.m */; };
+		072509081B0B014A000BEEF0 /* StockAppTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072509061B0B014A000BEEF0 /* StockAppTableView.swift */; };
+		072509091B0B014A000BEEF0 /* StockAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072509071B0B014A000BEEF0 /* StockAppTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 		072508F01B0B00D4000BEEF0 /* SimpleStockAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleStockAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		072508F51B0B00D4000BEEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072508F61B0B00D5000BEEF0 /* SimpleStockAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStockAppTests.swift; sourceTree = "<group>"; };
+		072509011B0B010F000BEEF0 /* SIOSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIOSocket.h; sourceTree = "<group>"; };
+		072509021B0B010F000BEEF0 /* SIOSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIOSocket.m; sourceTree = "<group>"; };
+		072509031B0B010F000BEEF0 /* socket.io.js.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket.io.js.h; sourceTree = "<group>"; };
+		072509061B0B014A000BEEF0 /* StockAppTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockAppTableView.swift; sourceTree = "<group>"; };
+		072509071B0B014A000BEEF0 /* StockAppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockAppTableViewCell.swift; sourceTree = "<group>"; };
+		0725090A1B0B01DB000BEEF0 /* SimpleStockApp-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleStockApp-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,9 @@
 		072508D21B0B00D4000BEEF0 = {
 			isa = PBXGroup;
 			children = (
+				0725090A1B0B01DB000BEEF0 /* SimpleStockApp-Swift-Bridging-Header.h */,
+				072509001B0B010F000BEEF0 /* SIOSocket */,
+				072509051B0B013A000BEEF0 /* TableConfig */,
 				072508DD1B0B00D4000BEEF0 /* SimpleStockApp */,
 				072508F31B0B00D4000BEEF0 /* SimpleStockAppTests */,
 				072508DC1B0B00D4000BEEF0 /* Products */,
@@ -110,6 +122,25 @@
 				072508F51B0B00D4000BEEF0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		072509001B0B010F000BEEF0 /* SIOSocket */ = {
+			isa = PBXGroup;
+			children = (
+				072509011B0B010F000BEEF0 /* SIOSocket.h */,
+				072509021B0B010F000BEEF0 /* SIOSocket.m */,
+				072509031B0B010F000BEEF0 /* socket.io.js.h */,
+			);
+			path = SIOSocket;
+			sourceTree = "<group>";
+		};
+		072509051B0B013A000BEEF0 /* TableConfig */ = {
+			isa = PBXGroup;
+			children = (
+				072509061B0B014A000BEEF0 /* StockAppTableView.swift */,
+				072509071B0B014A000BEEF0 /* StockAppTableViewCell.swift */,
+			);
+			name = TableConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				072508E31B0B00D4000BEEF0 /* ViewController.swift in Sources */,
+				072509041B0B010F000BEEF0 /* SIOSocket.m in Sources */,
+				072509081B0B014A000BEEF0 /* StockAppTableView.swift in Sources */,
+				072509091B0B014A000BEEF0 /* StockAppTableViewCell.swift in Sources */,
 				072508E11B0B00D4000BEEF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +373,7 @@
 				INFOPLIST_FILE = SimpleStockApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleStockApp-Swift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -349,6 +384,7 @@
 				INFOPLIST_FILE = SimpleStockApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleStockApp-Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};
